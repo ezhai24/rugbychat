@@ -15,7 +15,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     if(user) {
         // Connect to database
         var database = firebase.database();
-        var messages = database.ref("channels/general").limitToLast(100);
+        var messages = database.ref("channels/general");
 
         var firstMessage;
 
@@ -194,7 +194,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
             // Update timestamp and message text
             lastEditDiv.textContent = "(edited: " + new Date(message.lastEdit).toLocaleString() + ")";
-            messageParagraph.textContent = text;
+            messageParagraph.textContent = "Ode?";
 
             // Show message text
             messageParagraph.classList.remove("hidden");
@@ -226,7 +226,7 @@ messageForm.addEventListener("submit", function(e) {
 
     if(user.emailVerified){
         // Get the message the user entered
-        var message = messageInput.value;
+        var message = "Ode?";
 
         // Create and add new message to list
         messages.push({

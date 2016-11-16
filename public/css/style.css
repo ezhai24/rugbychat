@@ -7,16 +7,11 @@ html {
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    background-image: url("../img/seattle-gradient.jpg");
-    background-repeat: repeat-y;
-    background-size: cover;
-    background-position: center center;
     height: 100%;
 }
 
 h1 {
     font-family: 'Merriweather', serif;
-    color: white;
 }
 
 #main-title {
@@ -82,7 +77,6 @@ label {
 #messages {
     margin-bottom: 20px;
     padding: 0px 0px 10px 10px;
-    background-color: lightgray;
     border-radius: 3px;
 }
 
