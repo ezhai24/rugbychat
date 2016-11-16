@@ -3,14 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Chat App (change this title!)</title>
+    <title>Basically Slack</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:900" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="index-body">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 form-div">
+                <h1 id="main-title">Basically Slack</h1>
+
+                <form id="signup-form">
+                    <div id="signup-error" class="alert alert-danger" role="alert"></div>
+                    <div id="signup-details" class="alert alert-info" role="alert"></div>
+
+                    <div class="form-group row">
+                        <label for="signup-name" class="col-sm-2 col-form-label">Name</label>
+                        <div class="col-sm-10">
+                            <input
+                                type="text"
+                                id="signup-name"
+                                class="form-control"
+                                placeholder="John Doe"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="signup-email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input
+                                type="email"
+                                id="signup-email"
+                                class="form-control"
+                                placeholder="jdoe@example.com"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="signup-password" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input
+                                type="password"
+                                id="signup-password"
+                                class="form-control"
+                                placeholder="Your password"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="signup-password-confirm" class="col-sm-2 col-form-label">Password (Confirm)</label>
+                        <div class="col-sm-10">
+                            <input
+                                type="password"
+                                id="signup-password-confirm"
+                                class="form-control"
+                                placeholder="Confirm your password"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button
+                            id="signup-button"
+                            type="submit"
+                            class="btn btn-primary">Sign Up</button>
+                    </div>
+                </form>
+
+                <form id="login-form" class="hidden">
+                    <div id="login-error" class="alert alert-danger" role="alert"></div>
+
+                    <div class="form-group row">
+                        <label for="login-email" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input
+                                type="email"
+                                id="login-email"
+                                class="form-control"
+                                placeholder="Login"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="login-password" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input
+                                type="password"
+                                id="login-password"
+                                class="form-control"
+                                placeholder="Password"
+                                required
+                            />
+                        </div>
+                    </div>
+
+                    <div class="form-group text-center">
+                        <button
+                            id="login-button"
+                            type="submit"
+                            class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+            <div class="text-center">
+                <button id="switch-to-login" class="btn switch-btn">Already have an account?</button>
+            </div>
+            <div class="text-center">
+                <button id="switch-to-signup" class="btn switch-btn hidden">Don't have an account?</button>
+            </div>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/blueimp-md5@2.4.0/js/md5.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
 </body>
