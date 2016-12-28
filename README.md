@@ -1,3 +1,3 @@
-# Firebase Challenge
+# UW Women's Rugby Chat Application
 
-Use this directory for the [Firebase challenge](https://canvas.uw.edu/courses/1066610/assignments/3383825).
+Just a normal chat application except every message you send is "Ode?".
